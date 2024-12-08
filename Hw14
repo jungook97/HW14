@@ -1,0 +1,148 @@
+# Creating and Printing a List of Cities
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a list of cities
+        List<string> cities = new List<string>();
+
+        // Adding city names to the list
+        cities.Add("Almaty");
+        cities.Add("Astana");
+        cities.Add("Shymkent");
+        cities.Add("Karaganda");
+        cities.Add("Aktobe");
+
+        // Printing all cities to the console
+        Console.WriteLine("List of cities:");
+        foreach (string city in cities)
+        {
+            Console.WriteLine(city);
+        }
+    }
+}
+
+#Storing Returned Books
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a stack for storing books
+        Stack<string> books = new Stack<string>();
+
+        // Adding book titles to the stack
+        books.Push("Mystery of the Soul");
+        books.Push("The Path of Abai");
+        books.Push("The Exciting Years of Love");
+        books.Push("My Name is Koja");
+
+        // Removing the last added book (from the top)
+        books.Pop();
+
+        // Printing the remaining books
+        Console.WriteLine("Remaining books:");
+        foreach (string book in books)
+        {
+            Console.WriteLine(book);
+        }
+    }
+}
+
+
+#Managing Clients in a Queue 
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a queue for clients
+        Queue<string> clients = new Queue<string>();
+
+        // Adding clients to the queue
+        clients.Enqueue("Aidan");
+        clients.Enqueue("Erbol");
+        clients.Enqueue("Nurjan");
+        clients.Enqueue("Ayzhan");
+        clients.Enqueue("Daniyar");
+
+        // Removing the first two clients from the queue
+        clients.Dequeue();
+        clients.Dequeue();
+
+        // Printing the remaining clients
+        Console.WriteLine("Remaining clients:");
+        foreach (string client in clients)
+        {
+            Console.WriteLine(client);
+        }
+    }
+}
+
+
+#Price List 
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a dictionary for items and their prices
+        Dictionary<string, int> prices = new Dictionary<string, int>();
+
+        // Adding items and their prices
+        prices.Add("Bread", 120);
+        prices.Add("Milk", 200);
+        prices.Add("Chocolate", 500);
+        prices.Add("Tea", 300);
+        prices.Add("Sugar", 250);
+
+        // Retrieving and printing the price of a specific item
+        Console.WriteLine("Enter the name of the product to check its price:");
+        string product = Console.ReadLine();
+
+        if (prices.ContainsKey(product))
+        {
+            Console.WriteLine($"{product} price: {prices[product]} Tenge");
+        }
+        else
+        {
+            Console.WriteLine("This product is not found.");
+        }
+    }
+}
+
+
+# Finding the Largest Number in an Array
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an array of integers
+        int[] numbers = { 12, 45, 78, 34, 89 };
+
+        // Finding the largest number in the array
+        int maxNumber = numbers[0];
+        foreach (int number in numbers)
+        {
+            if (number > maxNumber)
+            {
+                maxNumber = number;
+            }
+        }
+
+        // Printing the largest number
+        Console.WriteLine($"The largest number is: {maxNumber}");
+    }
+}
